@@ -1,0 +1,11 @@
+version: '3.8'
+
+
+services:
+  fake_cloud_storage:
+    container_name: fake-gcs-server
+    image: fsouza/fake-gcs-server
+    ports:
+      - "4443:4443"
+    volumes:
+      - ./gcs/data:/data
